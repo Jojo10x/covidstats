@@ -1,0 +1,19 @@
+.header{
+    padding: 64px 150px 0;
+}
+.title{
+    font-size: 32px;
+    line-height: 37px;
+}
+.main{
+    padding: 0 150px 40px;
+}
+
+@media(max-width: 955px){
+    .header{
+        padding: 32px 15px 0;
+    }
+    .main{
+        padding: 0 15px 20px;
+    }
+}

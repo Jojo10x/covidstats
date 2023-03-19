@@ -1,0 +1,163 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+  .covidData {
+ 
+  width: 30%;
+  margin: auto;
+  margin-top: 15px;
+  border-radius: 6px;
+  padding: 10px;
+  }
+  
+  /* input stylings */
+  
+  .covidData__form {
+  padding: 10px;
+  margin: 20px;
+  }
+  .covidData__input input {
+  width: 400px;
+  height: 50px;
+  text-align: center;
+  font-size: 25px;
+  font-family: Roboto;
+  }
+  .covidData__input button {
+  width: 80px;
+  height: 50px;
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 5px 5px 5px rgb(71, 67, 67);
+  cursor: pointer;
+  }
+  
+  /* detail stylings */
+  
+  .covidData__country__info {
+  font-size: 20px;
+  font-family: Roboto;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  padding-left: 10px;
+  background-color: white;
+  margin-top: 20px;
+  padding: 2px;
+  text-shadow: 1px 1px 1px rgb(71, 67, 67);
+  box-shadow: 5px 5px 5px rgb(71, 67, 67);
+  }
+  
+ 
+ h1{
+    
+ font-style: normal;
+ font-size: 32px;
+ line-height: 38px;
+ line-height: 100%;
+ vertical-align: Top;
+ align-content: left;
+ font-family: 'Roboto', sans-serif;
+ color: #333333;
+ font-weight: 400;
+ line-height: 37.5px;
+ }
+ .countryName{
+  font-size: 32px;
+  font-family: 'Roboto', sans-serif;
+  color: #333333;
+  font-weight: 400;
+  line-height: 37.5px;
+ }
+ 
+ .middleTest{
+     font-size: 16px;
+     line-height: 28px;
+     word-spacing:10px ;
+     
+ }
+ .lightTest{
+     font-size: 14px;
+     line-height: 16px;
+    color: #333333;
+    font-family: 'Roboto', sans-serif;
+   
+ 
+ }
+ 
+ /* results */
+ 
+ .mainContainer{
+     display: flex;
+     flex-direction: row;
+     gap: 60px;
+     margin-top: 23px;
+     word-spacing:10px ;
+     
+ }
+ .leftContainer{
+     line-height: 20px;
+     margin-bottom: 64px;
+     margin-top: 3px;
+     
+     
+     
+ }
+ .centerContainer{
+     padding-top: 45px;
+     line-height: 20px;
+     margin-top: 3px;
+ }
+ .rightContainer{
+     padding-top: 45px;
+     line-height: 20px;
+     margin-top: 3px;
+   
+ }
+ span{
+     font-style:300px;
+      font-size: 14px;
+      line-height: 14px;
+     
+      color: black;
+      
+    
+ }
+ 
+ .itemsWithRed{
+  
+     color: red;
+    font-size: 14px;
+   line-height: 20px;
+   font-style: 300px;
+ }
+ 
+ .itemsWithOneMillion{
+   opacity: 50%;
+   font-weight: 300px;
+   font-size: 14px;
+   line-height: 22px;
+  
+   
+ }
+ .criteria{
+margin-bottom: 4px;
+
+ }
