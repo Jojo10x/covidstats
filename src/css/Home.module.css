@@ -10,6 +10,7 @@ body {
   
 .wrapper{
     margin-top: 16px;
+
 }
 .labelSearch{
     font-size: 16px;
@@ -30,7 +31,6 @@ body {
     margin-left: -32px;
     cursor: pointer;
 }
-
 
 .navigation{
     display: flex;
@@ -116,36 +116,33 @@ body {
 }
 
 /* country stats */
-
+/* 
 .country{
     font-size: 32px;
     line-height: 37.5px;
     margin-bottom: 23px;
     margin-top: 14px;
-    
+    font-weight: 400px;
 }
 .statisticsContainer{
     display: flex;
     margin-top: 23px;
-    line-height: 16.4px;
-    
+    line-height: 16.4px;   
+    font-weight: 400px;
     
 }
 .list{
     margin-right: 53px;
   
-    
-    
 }
 .list:last-child{
     margin: 0;
-    
-    
-    
+  
 }
 .criteria{
     margin-bottom: 14px;
     line-height: 16.41px;
+   font-weight: 400px;
 
 }
 
@@ -153,6 +150,7 @@ body {
 .item, .itemMain,.itemGray,.itemRed{
     font-size: 14px;
     line-height: 16px;  
+   font-weight: 400px;
     
 }
 .item:first-child{
@@ -161,14 +159,9 @@ body {
 }
 .item:first-child, .itemMain:first-child,.itemGray:first-child{
     margin-right: 12px;
-   
-   
-  
- 
+   font-weight: 300px;
+   font-style: light;
 }
-
-
-
 .item:last-child, .itemMain:last-child,.itemGray:last-child{
    font-weight: 400px;
 
@@ -178,6 +171,7 @@ body {
 
 .item{
     font-weight: 300;
+    margin-top: 14px;
     
     
 }
@@ -221,4 +215,6 @@ body {
     }
 
 
-}
+} */
+
+

@@ -1,4 +1,4 @@
-import s from "./css/Home.module.css"
+import s from "./css/country.module.css"
 import {useEffect, useState} from "react";
 import Layout from "./Layout";
 import { useParams, useNavigate } from 'react-router-dom';
@@ -121,7 +121,7 @@ function Details (){
         </div>
         </>)}
         </div>    
-        <button onClick={() => navigate(-1)}>Back</button>
+        <button className={s.backButton} onClick={() => navigate(-1)}>Back</button>
         </div>
             
         </Layout>
