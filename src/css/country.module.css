@@ -34,8 +34,9 @@
     
 }
 .item:first-child{
-  font-weight: 100;
+  font-weight: 300;
   color: #333333;
+  
 }
 .item:first-child, .itemMain:first-child,.itemGray:first-child{
     margin-right: 12px;
