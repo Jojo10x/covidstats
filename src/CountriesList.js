@@ -1,5 +1,4 @@
 import s from "./css/Home.module.css"
-import "./css/App.css";
 import {useEffect, useState} from "react";
 import searchIcon from "./images/searchIcon.png";
 import leftArrow from "./images/leftArrow.png";

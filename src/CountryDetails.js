@@ -1,5 +1,4 @@
 import s from "./css/Home.module.css"
-import "./css/App.css";
 import {useEffect, useState} from "react";
 import Layout from "./Layout";
 import { useParams, useNavigate } from 'react-router-dom';
@@ -46,8 +45,6 @@ function Details (){
                 </div>
     </section>
      <div className={s.wrapper}>
-      <h1>Statistics On Covid</h1>
-      
         {containerForStats.map(home => <>
         <h2 className={s.country}>{home.country}</h2>
         <div className={s.criteria}>

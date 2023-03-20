@@ -1,4 +1,3 @@
-import "./css/App.css";
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import CountriesList from "./CountriesList";
 import CountryDetails from "./CountryDetails";
