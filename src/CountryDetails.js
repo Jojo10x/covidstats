@@ -1,4 +1,4 @@
-import s from "./css/country.module.css"
+import s from "./css/Country.module.css"
 import {useEffect, useState} from "react";
 import Layout from "./Layout";
 import { useParams, useNavigate } from 'react-router-dom';
@@ -31,17 +31,12 @@ function Details (){
     return arr.filter((num) => num.slice(0,1).includes(number.toUpperCase()));
    }
 
-
   return (
   <Layout title={"Covid-19 statistics"}>
   <div className={s.wrapper}>
-     <div>
-    
-    </div>
-
     <section className={s.countriesLinks}>
       <div>
-        {filterItems(containerForCountries,activePage).map(el=><div className={s.link} onClick={()=>{getStats(el)}}>{el}  </div> )}
+        {filterItems(containerForCountries,activePage).map(el=><div className={s.link} onClick={getStats(el)}>{el}  </div> )}
                 </div>
     </section>
      <div className={s.wrapper}>
@@ -121,7 +116,7 @@ function Details (){
         </div>
         </>)}
         </div>    
-        <button className={s.backButton} onClick={() => navigate(-1)}>Back</button>
+        <button className={s.backButton} onClick={() => navigate('/')}>Back</button>
         </div>
             
         </Layout>
