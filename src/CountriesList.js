@@ -14,7 +14,6 @@ function List (){
 
     const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     const [endPointForCountries,setEndPointForCountries] = useState('')
-    const [finalPointForCountries,setFinalPointForCountries] = useState('')
     const [containerForCountries, setContainerForCountries] = useState([]);
     let [activePage, setActivePage] = useState("A");
     
@@ -40,7 +39,7 @@ function List (){
 
       useEffect(()=>{
         getCountries()
-      },[finalPointForCountries])
+      },[endPointForCountries])
 
 
   
