@@ -1,5 +1,5 @@
 import s from "./css/Home.module.css"
-import {useEffect, useState} from "react";
+import {useEffect, useState,useCallback} from "react";
 import searchIcon from "./images/searchIcon.png";
 import leftArrow from "./images/leftArrow.png";
 import rightArrow from "./images/rightArrow.png";
@@ -37,25 +37,23 @@ function List (){
         setActivePage(result);
     }
 
-      useEffect(()=>{
-        getCountries()
-      },[endPointForCountries])
-
-
-  
-          const getCountries =()=> {
-  
-  fetch(`https://covid-193.p.rapidapi.com/countries?=${endPointForCountries}`,{
-    "method": 'GET',
-    "headers": {
-      'X-RapidAPI-Key': '3567354036mshd4bb10dd86f6d97p179845jsn17d926c83028',
-      'X-RapidAPI-Host': 'covid-193.p.rapidapi.com'
-    }
-    }).then(response => { return response.json()})
-    .then(data =>{setContainerForCountries(data.response)})
-
-    .catch(err => console.error(err));
-    } 
+    const getCountries = useCallback(() => {
+      fetch(`https://covid-193.p.rapidapi.com/countries?=${endPointForCountries}`, {
+        "method": 'GET',
+        "headers": {
+          'X-RapidAPI-Key': '3567354036mshd4bb10dd86f6d97p179845jsn17d926c83028',
+          'X-RapidAPI-Host': 'covid-193.p.rapidapi.com'
+        }
+      }).then(response => response.json())
+        .then(data => {
+          setContainerForCountries(data.response);
+        })
+        .catch(err => console.error(err));
+    }, [endPointForCountries]); // Only endPointForCountries is a dependency
+    
+    useEffect(() => {
+      getCountries();
+    }, [getCountries]);
            
   function filterItems(arr, number) {
     return arr.filter((num) => num.slice(0,1).includes(number.toUpperCase()));

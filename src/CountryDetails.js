@@ -1,5 +1,5 @@
 import s from "./css/country.module.css"
-import {useEffect, useState} from "react";
+import {useEffect, useState,useCallback} from "react";
 import Layout from "./Layout";
 import { useParams, useNavigate } from 'react-router-dom';
 
@@ -10,27 +10,27 @@ function Details (){
     const [containerForCountries, setContainerForCountries] = useState([]);
     let [activePage, setActivePage] = useState("A");
 
-    useEffect(()=>{
-      getStats()
-      },[code,])
 
-    const getStats =()=> {
+    const getStats = useCallback(() => {
+      fetch(`https://covid-193.p.rapidapi.com/statistics?country=${code}`, {
+        "method": 'GET',
+        "headers": {
+          'X-RapidAPI-Key': '3567354036mshd4bb10dd86f6d97p179845jsn17d926c83028',
+          'X-RapidAPI-Host': 'covid-193.p.rapidapi.com'
+        }
+      }).then(response => response.json())
+        .then(data => {
+          setContainerForStats(data.response);
+          const countries = data.response.map(stat => stat.country);
+          setContainerForCountries(countries);
+        })
+        .catch(err => console.error(err));
+    }, [code]);
 
-    fetch(`https://covid-193.p.rapidapi.com/statistics?country=${code}`,{
-    "method": 'GET',
-    "headers": {
-    'X-RapidAPI-Key': '3567354036mshd4bb10dd86f6d97p179845jsn17d926c83028',
-    'X-RapidAPI-Host': 'covid-193.p.rapidapi.com'
-    }
-    }).then(response => { return response.json()})
-    .then(data => {
-      setContainerForStats(data.response);
-      const countries = data.response.map(stat => stat.country);
-      setContainerForCountries(countries);
-  })
-    .catch(err => console.error(err));
-    }
-  
+    useEffect(() => {
+      getStats();
+    }, [code, getStats]);
+
   function filterItems(arr, number) {
     return arr.filter((num) => num.slice(0,1).includes(number.toUpperCase()));
    }
