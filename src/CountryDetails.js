@@ -1,4 +1,4 @@
-import s from "./css/Country.module.css"
+import s from "./css/country.module.css"
 import {useEffect, useState} from "react";
 import Layout from "./Layout";
 import { useParams, useNavigate } from 'react-router-dom';
