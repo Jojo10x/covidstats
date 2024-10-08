@@ -1,4 +1,7 @@
-https://covidstats.netlify.app/
+## https://covidstats.netlify.app/
+
+<img width="1352" alt="Screenshot 2024-10-08 at 1 49 04 PM" src="https://github.com/user-attachments/assets/842f24fc-2f0c-4392-9419-281dae78a241">
+<img width="1352" alt="Screenshot 2024-10-08 at 1 50 08 PM" src="https://github.com/user-attachments/assets/2427d68c-f46d-43e1-b063-483504b09b78">
 
 # Getting Started with Create React App
 
